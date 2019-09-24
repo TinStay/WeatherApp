@@ -3,7 +3,6 @@ from PIL import ImageTk, Image
 import requests
 from tkinter import font
 
-#API KEY = d214969f14453086bf7e9a78f822fb27
 #API CALL = api.openweathermap.org/data/2.5/forecast?q={city name},{country code}
 
 height= 500
@@ -11,7 +10,7 @@ width=600
 
 
 def get_weather(city):
-    weather_key = '9725852c66767bb568e1e38e4cc9d0df'
+    weather_key = ''
     url = 'http://api.openweathermap.org/data/2.5/weather'
     params = {'APPID': weather_key, 'q': city, 'units': 'Metric'}
     response = requests.get(url, params=params)
@@ -39,6 +38,7 @@ def format_response(weather):
 #Tkinter
 root = tk.Tk()
 root.resizable(0, 0)
+root.title('WeatherApp')
 
 canvas = tk.Canvas(root, height=height, width=width)
 canvas.pack()
