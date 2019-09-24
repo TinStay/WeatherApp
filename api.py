@@ -3,6 +3,7 @@ from PIL import ImageTk, Image
 import requests
 from tkinter import font
 
+
 #API CALL = api.openweathermap.org/data/2.5/forecast?q={city name},{country code}
 
 height= 500
@@ -10,7 +11,7 @@ width=600
 
 
 def get_weather(city):
-    weather_key = '9725852c66767bb568e1e38e4cc9d0df'
+    weather_key = ''
     url = 'http://api.openweathermap.org/data/2.5/weather'
     params = {'APPID': weather_key, 'q': city, 'units': 'Metric'}
     response = requests.get(url, params=params)
